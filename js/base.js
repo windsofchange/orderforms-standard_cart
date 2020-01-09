@@ -337,7 +337,7 @@ jQuery(document).ready(function(){
                                 .find('.max-length').html(domain.maxLength).end();
                             invalidLength.show();
                         } else if (data.result.error) {
-                            error.html(data.result.error);
+                            error.text(data.result.error);
                             error.show();
                             done = true;
                         }
@@ -528,7 +528,13 @@ jQuery(document).ready(function(){
                         window.location = 'cart.php?a=confproduct&i=' + result.num;
                     } else {
                         jQuery('.domain-lookup-primary-loader').hide();
-                        jQuery('#primaryLookupResult').removeClass('hidden').show().find('.domain-invalid').show();
+                        if (typeof result === 'string') {
+                            jQuery('#primaryLookupResult').removeClass('hidden').show().find('.domain-error')
+                                .text(result)
+                                .show();
+                        } else {
+                            jQuery('#primaryLookupResult').removeClass('hidden').show().find('.domain-invalid').show();
+                        }
                     }
                 });
 
@@ -578,12 +584,15 @@ jQuery(document).ready(function(){
         cvvFieldContainer = jQuery('#cvv-field-container'),
         existingCardContainer = jQuery('#existingCardsContainer'),
         newCardInfo = jQuery('#newCardInfo'),
+        newCardSaveSettings = jQuery('#newCardSaveSettings'),
+        inputNoStoreContainer = jQuery('#inputNoStoreContainer'),
         existingCardInfo = jQuery('#existingCardInfo'),
         newCardOption = jQuery('#new'),
         creditCardInputFields = jQuery('#creditCardInputFields');
 
     existingCards.on('ifChecked', function(event) {
-        if (jQuery('.payment-methods:checked').val() === 'stripe') {
+        newCardSaveSettings.slideUp().find('input').attr('disabled', 'disabled');
+        if (jQuery('.payment-methods:checked').data('remote-inputs') === 1) {
             return;
         }
 
@@ -591,7 +600,8 @@ jQuery(document).ready(function(){
         existingCardInfo.slideDown().find('input').removeAttr('disabled');
     });
     newCardOption.on('ifChecked', function(event) {
-        if (jQuery('.payment-methods:checked').val() === 'stripe') {
+        newCardSaveSettings.slideDown().find('input').removeAttr('disabled');
+        if (jQuery('.payment-methods:checked').data('remote-inputs') === 1) {
             return;
         }
 
@@ -609,6 +619,13 @@ jQuery(document).ready(function(){
                 gatewayModule = jQuery(this).val(),
                 showLocal = jQuery(this).data('show-local'),
                 relevantMethods = [];
+            if (gatewayPaymentType === 'RemoteCreditCard') {
+                inputNoStoreContainer.hide().find('input').prop('disabled', 'disabled');
+            } else {
+                if (!(inputNoStoreContainer.is(':visible'))) {
+                    inputNoStoreContainer.show().find('input').removeProp('disabled');
+                }
+            }
 
             existingCards.each(function(index) {
                 var paymentType = jQuery(this).data('payment-type'),
@@ -860,7 +877,7 @@ jQuery(document).ready(function(){
                             .find('.max-length').html(domain.maxLength).end();
                         invalidLength.show();
                     } else if (data.result.error) {
-                        error.html(data.result.error);
+                        error.text(data.result.error);
                         error.show();
                         done = true;
                     }
@@ -1282,6 +1299,10 @@ jQuery(document).ready(function(){
     if (checkoutForm.length) {
         checkoutForm.on('submit', validateCheckoutCreditCardInput);
     }
+
+    if (existingCardContainer.is(':visible')) {
+        newCardInfo.hide();
+    }
 });
 //checkoutForm
 function validateCheckoutCreditCardInput(e)
@@ -1451,7 +1472,7 @@ function selectDomainPeriodInCart(domainName, price, period, yearsString) {
         function(data) {
             data.domains.forEach(function(domain) {
                 jQuery("[name='" + domain.domain + "Price']").parent('div').find('.renewal-price').html(
-                    domain.renewprice + domain.shortYearsLanguage
+                    domain.prefixedRenewPrice + domain.shortRenewalYearsLanguage
                 ).end();
             });
             jQuery('#subtotal').html(data.subtotal);
@@ -1547,7 +1568,7 @@ function validate_captcha(form)
             jQuery('#inputCaptcha').attr('data-original-title', data.error).tooltip('show');
             if (captcha.length) {
                 jQuery('#inputCaptchaImage').replaceWith(
-                    '<img id="inputCaptchaImage" src="includes/verifyimage.php" align="middle" />'
+                    '<img id="inputCaptchaImage" src="' + whmcsBaseUrl + 'includes/verifyimage.php" align="middle" />'
                 );
             }
         } else {
