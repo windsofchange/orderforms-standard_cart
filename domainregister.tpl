@@ -192,7 +192,7 @@
                     </div>
                 {/if}
 
-<!-- 
+<!--
                 <h4>{lang key='pricing.browseExtByCategory'}</h4>
 
                 <div class="tld-filters">
@@ -295,7 +295,7 @@
                     </div>
                 {/if}
             </div>
-
+            {include file="$template/includes/alert.tpl" type="warning" msg=$LANG.domainregisterinfo}
         </div>
     </div>
 </div>
