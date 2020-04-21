@@ -148,7 +148,7 @@
                                 <div class="summary-container" id="producttotal"></div>
                             </div>
                             <div class="text-center">
-                                <a id="btnGoToCart" class="btn btn-primary btn-lg" href="{$WEB_ROOT}/cart.php?a=view">
+                                <a id="btnGoToCart" class="btn btn-success btn-lg" href="{$WEB_ROOT}/cart.php?a=view">
                                     {lang key='viewcart'}
                                     <i class="glyphicon glyphicon-shopping-cart"></i>
                                 </a>
