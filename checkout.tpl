@@ -38,7 +38,7 @@
 
             <div class="already-registered clearfix">
                 <div class="pull-right">
-                    <button type="button" class="btn btn-info{if $loggedin || !$loggedin && $custtype eq "existing"} hidden{/if}" id="btnAlreadyRegistered">
+                    <button type="button" class="btn btn-success{if $loggedin || !$loggedin && $custtype eq "existing"} hidden{/if}" id="btnAlreadyRegistered">
                         {$LANG.orderForm.alreadyRegistered}
                     </button>
                     <button type="button" class="btn btn-warning{if $loggedin || $custtype neq "existing"} hidden{/if}" id="btnNewUserSignup">
@@ -713,7 +713,7 @@
 
                     <button type="submit"
                             id="btnCompleteOrder"
-                            class="btn btn-primary btn-lg disable-on-click spinner-on-click{if $captcha}{$captcha->getButtonClass($captchaForm)}{/if}"
+                            class="btn btn-success btn-lg disable-on-click spinner-on-click{if $captcha}{$captcha->getButtonClass($captchaForm)}{/if}"
                             {if $cartitems==0}disabled="disabled"{/if}
                     >
                         {if $inExpressCheckout}{$LANG.confirmAndPay}{else}{$LANG.completeorder}{/if}
