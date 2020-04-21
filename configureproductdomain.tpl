@@ -258,7 +258,7 @@
                                                         <span class="added">{lang key='domaincheckeradded'}</span>
                                                         <span class="unavailable">{$LANG.domaincheckertaken}</span>
                                                     </button>
-                                                    <button type="button" class="btn btn-primary domain-contact-support hidden">Contact Support to Purchase</button>
+                                                    <button type="button" class="btn btn- domain-contact-support hidden">Contact Support to Purchase</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -299,7 +299,7 @@
                 </div>
 
                 <div class="text-center">
-                    <button id="btnDomainContinue" type="submit" class="btn btn-primary btn-lg hidden" disabled="disabled">
+                    <button id="btnDomainContinue" type="submit" class="btn btn-success btn-lg hidden" disabled="disabled">
                         {$LANG.continue}
                         &nbsp;<i class="fas fa-arrow-circle-right"></i>
                     </button>
