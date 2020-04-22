@@ -76,7 +76,7 @@
                             <span class="price"></span>
                             <button class="btn btn-primary btn-add-to-cart" data-whois="0" data-domain="">
                                 <span class="to-add">{$LANG.addtocart}</span>
-                                <span class="added"><i class="glyphicon glyphicon-shopping-cart"></i> {lang key='checkout'}</span>
+                                <span class="added achecker"><i class="glyphicon glyphicon-shopping-cart"></i> {lang key='checkout'}</span>
                                 <span class="unavailable">{$LANG.domaincheckertaken}</span>
                             </button>
                         </p>
@@ -107,7 +107,7 @@
                                             <span class="available price hidden">{$data.register}</span>
                                             <button type="button" class="btn hidden btn-add-to-cart" data-whois="0" data-domain="">
                                                 <span class="to-add">{lang key='orderForm.add'}</span>
-                                                <span class="added"><i class="glyphicon glyphicon-shopping-cart"></i> {lang key='checkout'}</span>
+                                                <span class="added acheckerspotlight"><i class="glyphicon glyphicon-shopping-cart"></i> {lang key='checkout'}</span>
                                                 <span class="unavailable">{$LANG.domaincheckertaken}</span>
                                             </button>
                                             <button type="button" class="btn btn-primary domain-contact-support hidden">
@@ -140,7 +140,7 @@
                                 <span class="price"></span>
                                 <button type="button" class="btn btn-add-to-cart" data-whois="1" data-domain="">
                                     <span class="to-add">{$LANG.addtocart}</span>
-                                    <span class="added"><i class="glyphicon glyphicon-shopping-cart"></i> {lang key='checkout'}</span>
+                                    <span class="added acheckerotherhits"><i class="glyphicon glyphicon-shopping-cart"></i> {lang key='checkout'}</span>
                                     <span class="unavailable">{$LANG.domaincheckertaken}</span>
                                 </button>
                                 <button type="button" class="btn btn-primary domain-contact-support hidden">
@@ -295,7 +295,7 @@
                     </div>
                 {/if}
             </div>
-            {include file="$template/includes/alert.tpl" type="warning" msg=$LANG.domainregisterinfo}
+            {include file="$template/includes/alert.tpl" type="info" msg=$LANG.domainregisterinfo}
         </div>
     </div>
 </div>
