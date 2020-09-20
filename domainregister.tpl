@@ -257,6 +257,21 @@
                     </div>
                 </div>
 -->
+
+        <!-- RC Promos Widget -->
+            <h4>Current Domain Promos!</h4>
+            <script language="javascript" style="font-size:medium;" src = "widgets/domainpricelist.php?details=promos&format=3"></script>
+
+            <span style="margin-left:23px;font-size:1.1em">Terms of Offer:</span>
+                <ol style="margin-left:23px">
+                    <li>Promotion price is valid for new domain registrations.</li>
+                    <li>Price is appplicable for the first year of the domain registration.</li>
+                    <li>No lock in period.</li>
+                    <li>No need to renew after initial registation.</li>
+                    <li>Valid upto the date given above, first come first served basis</li>
+                </ol>
+        <!-- End RC Promos Widget -->
+
             </div>
 
             <div class="row">
