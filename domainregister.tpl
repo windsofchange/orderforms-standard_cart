@@ -261,7 +261,6 @@
         <!-- RC Promos Widget -->
             <h4>Current Domain Promos!</h4>
             <script language="javascript" style="font-size:medium;" src = "widgets/domainpricelist.php?details=promos&format=3"></script>
-
             <span style="margin-left:23px;font-size:1.1em">Terms of Offer:</span>
                 <ol style="margin-left:23px">
                     <li>Promotion price is valid for new domain registrations.</li>
