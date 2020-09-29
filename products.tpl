@@ -37,12 +37,6 @@
 
             {include file="orderforms/{$carttpl}/sidebar-categories-collapsed.tpl"}
 
-            {foreach $hookAboveProductsOutput as $output}
-                <div>
-                    {$output}
-                </div>
-            {/foreach}
-
             <div class="products" id="products">
                 <div class="row row-eq-height">
                     {foreach $products as $key => $product}
@@ -50,7 +44,7 @@
                             <div class="product clearfix" id="product{$product@iteration}">
                                 <header>
                                     <span id="product{$product@iteration}-name">{$product.name}</span>
-                                    {if $product.qty}
+                                    {if $product.stockControlEnabled}
                                         <span class="qty">
                                             {$product.qty} {$LANG.orderavailable}
                                         </span>
@@ -104,7 +98,7 @@
                                             {/if}
                                         {/if}
                                     </div>
-                                    <a href="cart.php?a=add&{if $product.bid}bid={$product.bid}{else}pid={$product.pid}{/if}" class="btn btn-success btn-sm" id="product{$product@iteration}-order-button">
+                                    <a href="{$WEB_ROOT}/cart.php?a=add&{if $product.bid}bid={$product.bid}{else}pid={$product.pid}{/if}" class="btn btn-success btn-sm" id="product{$product@iteration}-order-button">
                                         <i class="fas fa-shopping-cart"></i>
                                         {$LANG.ordernowbutton}
                                     </a>
@@ -118,13 +112,6 @@
                     {/foreach}
                 </div>
             </div>
-
-            {foreach $hookBelowProductsOutput as $output}
-                <div>
-                    {$output}
-                </div>
-            {/foreach}
-
         </div>
     </div>
 </div>
