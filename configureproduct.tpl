@@ -138,7 +138,7 @@ var _localLang = {
                                         </div>
                                     </div>
                                 </div>
-
+<!-- remove ns1,ns2 for VPS
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
@@ -153,7 +153,7 @@ var _localLang = {
                                         </div>
                                     </div>
                                 </div>
-
+-->
                             </div>
                         {/if}
 
