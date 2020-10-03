@@ -214,7 +214,7 @@
                 {/if}
 
 <!-- RC Promos Widget -->
-<script language="javascript" src = "widgets/domainpricelist.php?details=promos&format=1&promotitle=1&limit=3"></script>
+<script language="javascript" src = "widgets/domainpricelist.php?details=promos&format=1&promotitle=1&limit=30"></script>
 <span style="margin-left:23px;font-size:1.1em">Terms of Offer:</span>
                 <ol style="margin-left:23px">
                     <li>Promo price is valid for new domain-registration</li>
