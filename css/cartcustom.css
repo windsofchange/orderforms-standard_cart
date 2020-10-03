@@ -23,3 +23,6 @@ div#div_dompromo th:nth-child(1), th:nth-child(5), th:nth-child(3) {
     padding: 3px;
   }
 }
+.suggested-domains .promo.sale .promo.hot .promo.new {
+    text-transform: lowercase;
+}
