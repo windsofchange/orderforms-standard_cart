@@ -1,8 +1,8 @@
 .div_dompromo {
-    /** margin-left:25px;
-    background-color: #d9edf7; ** poor in Iphone 5 **/
+    /** margin-left:25px; **/
+    background-color: #d9edf7;
     border-color: #bce8f1;
-    padding: 5px;
+    padding: 10px;
     margin-bottom: 10px;
     border: 1px solid transparent;
     border-radius: 10px;
@@ -16,4 +16,10 @@ div#div_dompromo td:nth-child(1), td:nth-child(5), td:nth-child(3) {
 
 div#div_dompromo th:nth-child(1), th:nth-child(5), th:nth-child(3) {
    display: none;
+}
+@media only screen and (max-width: 600px) {
+  .div_dompromo {
+    background-color: white;
+    padding: 3px;
+  }
 }
