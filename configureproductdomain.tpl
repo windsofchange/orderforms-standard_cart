@@ -7,8 +7,8 @@
         <div class="pull-md-right col-md-9">
 
             <div class="header-lined">
-                <h1>Order {$productinfo.name}</h1>
-                <h2>{$LANG.domaincheckerchoosedomain}</h2>
+                <h1>Order - {$productinfo.name}</h1>
+                <h2>Step 1:{$LANG.domaincheckerchoosedomain}</h2>
             </div>
 
         </div>
