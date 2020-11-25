@@ -46,7 +46,7 @@ var _localLang = {
                 {foreach $domains as $num => $domain}
 
                     <div class="sub-heading">
-                        <span>{$domain.domain}</span>
+                        <span style="font-size: 1.2em;">{$domain.domain}</span>
                     </div>
 
                     <div class="row">
