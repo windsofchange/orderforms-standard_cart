@@ -14,7 +14,8 @@ var _localLang = {
         <div class="pull-md-right col-md-9">
 
             <div class="header-lined">
-                <h1>{$LANG.cartdomainsconfig}</h1>
+                <h1>Domain Name Registration</h1>
+                <h2>{$LANG.cartdomainsconfig} - Addon</h2>
             </div>
 
         </div>
