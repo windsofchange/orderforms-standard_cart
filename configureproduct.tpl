@@ -14,7 +14,8 @@ var _localLang = {
         <div class="pull-md-right col-md-9">
 
             <div class="header-lined">
-                <h1>{$LANG.orderconfigure}</h1>
+                <h1>Order {$productinfo.name}</h1>
+                <h2>Step2: {$LANG.orderconfigure} Product</h2>
             </div>
 
         </div>
