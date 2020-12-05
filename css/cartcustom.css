@@ -7,7 +7,7 @@
     border: 1px solid transparent;
     border-radius: 10px;
 }
-.td_dompromo {color:#444;padding-right: 5px;}
+.td_dompromo {text-align:center;color:#444;padding-right: 5px;width: 41%;}
 .th_dompromo {text-align:center;font-size:1.1em;}
 
 div#div_dompromo td:nth-child(1), td:nth-child(5), td:nth-child(3) {
