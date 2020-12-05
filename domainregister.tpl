@@ -247,7 +247,7 @@
                 </div>
                 {foreach $pricing['pricing'] as $tld => $price}
                     <div class="row tld-row" data-category="{foreach $price.categories as $category}|{$category}|{/foreach}">
-                        <div class="col-sm-4 two-row-center">
+                        <div class="col-sm-4 row-center">
                             <strong>.{$tld}</strong>
                             {if $price.group}
                                 <span class="tld-sale-group tld-sale-group-{$price.group}">{$price.group}!</span>
@@ -257,24 +257,24 @@
                             <div class="row">
                                 <div class="col-xs-4 text-center">
                                     {if current($price.register) >= 0}
-                                        {current($price.register)}<br>
-                                        <small>{key($price.register)} {if key($price.register) > 1}{lang key="orderForm.years"}{else}{lang key="orderForm.year"}{/if}</small>
+                                        {current($price.register)} <!-- <br>
+                                        <small>{key($price.register)} {if key($price.register) > 1}{lang key="orderForm.years"}{else}{lang key="orderForm.year"}{/if}</small> -->
                                     {else}
                                         <small>N/A</small>
                                     {/if}
                                 </div>
                                 <div class="col-xs-4 text-center">
                                     {if current($price.transfer) > 0}
-                                        {current($price.transfer)}<br>
-                                        <small>{key($price.transfer)} {if key($price.register) > 1}{lang key="orderForm.years"}{else}{lang key="orderForm.year"}{/if}</small>
+                                        {current($price.transfer)} <!-- <br>
+                                        <small>{key($price.transfer)} {if key($price.register) > 1}{lang key="orderForm.years"}{else}{lang key="orderForm.year"}{/if}</small> -->
                                     {else}
                                         <small>N/A</small>
                                     {/if}
                                 </div>
                                 <div class="col-xs-4 text-center">
                                     {if current($price.renew) > 0}
-                                        {current($price.renew)}<br>
-                                        <small>{key($price.renew)} {if key($price.register) > 1}{lang key="orderForm.years"}{else}{lang key="orderForm.year"}{/if}</small>
+                                        {current($price.renew)} <!-- <br>
+                                        <small>{key($price.renew)} {if key($price.register) > 1}{lang key="orderForm.years"}{else}{lang key="orderForm.year"}{/if}</small> -->
                                     {else}
                                         <small>N/A</small>
                                     {/if}
