@@ -154,7 +154,10 @@ var _localLang = {
                                         </div>
                                     </div>
                                 </div>
--->
+------>
+                                <input type="hidden" name="ns1prefix" class="form-control" id="inputNs1prefix" value="ns1">
+                                <input type="hidden" name="ns2prefix" class="form-control" id="inputNs2prefix" value="ns2">
+
                             </div>
                         {/if}
 
