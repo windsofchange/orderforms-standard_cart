@@ -17,7 +17,7 @@ var _localLang = {
             <div class="header-lined">
                 <h1 class="font-size-36">{$LANG.cartdomainsconfig}</h1>
             </div>
-            {include file="orderforms/{$carttpl}/sidebar-categories-collapsed.tpl"}
+            {include file="orderforms/standard_cart/sidebar-categories-collapsed.tpl"}
 
             <form method="post" action="{$smarty.server.PHP_SELF}?a=confdomains" id="frmConfigureDomains">
                 <input type="hidden" name="update" value="true" />
