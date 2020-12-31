@@ -1,4 +1,4 @@
-{include file="orderforms/{$carttpl}/common.tpl"}
+{include file="orderforms/standard_cart/common.tpl"}
 
 <script>
 var _localLang = {
