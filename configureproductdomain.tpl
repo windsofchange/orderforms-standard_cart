@@ -324,7 +324,7 @@
                 </div>
 
                 <div class="text-center">
-                    <button id="btnDomainContinue" type="submit" class="btn btn-success btn-lg hidden" disabled="disabled">
+                    <button id="btnDomainContinue" type="submit" class="btn btn-primary btn-lg hidden" disabled="disabled">
                         {$LANG.continue}
                         &nbsp;<i class="fas fa-arrow-circle-right"></i>
                     </button>
