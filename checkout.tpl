@@ -38,7 +38,7 @@
 
             <div class="already-registered clearfix">
                 <div class="pull-right">
-                    <button type="button" class="btn btn-success{if $loggedin || !$loggedin && $custtype eq "existing"} hidden{/if}" id="btnAlreadyRegistered">
+                    <button type="button" class="btn btn-info{if $loggedin || !$loggedin && $custtype eq "existing"} hidden{/if}" id="btnAlreadyRegistered">
                         {$LANG.orderForm.alreadyRegistered}
                     </button>
                     <button type="button" class="btn btn-warning{if $loggedin || $custtype neq "existing"} hidden{/if}" id="btnNewUserSignup">
