@@ -1,4 +1,4 @@
-{include file="orderforms/{$carttpl}/common.tpl"}
+{include file="orderforms/standard_cart/common.tpl"}
 
 <script>
 var _localLang = {
@@ -10,24 +10,13 @@ var _localLang = {
 <div id="order-standard_cart">
 
     <div class="row">
-
-        <div class="pull-md-right col-md-9">
-
-            <div class="header-lined">
-                <h1>Domain Name Registration</h1>
-                <h2>{$LANG.cartdomainsconfig} - Addon</h2>
-            </div>
-
-        </div>
-
-        <div class="col-md-3 pull-md-left sidebar hidden-xs hidden-sm">
-
+        <div class="cart-sidebar">
             {include file="orderforms/standard_cart/sidebar-categories.tpl"}
-
         </div>
-
-        <div class="col-md-9 pull-md-right">
-
+        <div class="cart-body">
+            <div class="header-lined">
+                <h1 class="font-size-36">{$LANG.cartdomainsconfig}</h1>
+            </div>
             {include file="orderforms/standard_cart/sidebar-categories-collapsed.tpl"}
 
             <form method="post" action="{$smarty.server.PHP_SELF}?a=confdomains" id="frmConfigureDomains">
@@ -47,7 +36,7 @@ var _localLang = {
                 {foreach $domains as $num => $domain}
 
                     <div class="sub-heading">
-                        <span style="font-size: 1.4em;">{$domain.domain}</span>
+                        <span class="primary-bg-color">{$domain.domain}</span>
                     </div>
 
                     <div class="row">
@@ -111,7 +100,7 @@ var _localLang = {
                                             <label>
                                                 <input type="checkbox" name="idprotection[{$num}]"{if $domain.idprotectionselected} checked{/if} />
                                                 {$LANG.domainidprotection}
-                                                </label><br />
+                                            </label><br />
                                             {$LANG.domainaddonsidprotectioninfo}
                                         </div>
                                         <div class="panel-price">
@@ -149,8 +138,8 @@ var _localLang = {
                         </div>
                     {/if}
                     {foreach from=$domain.fields key=domainfieldname item=domainfield}
-                        <div class="row">
-                            <div class="col-sm-4">{$domainfieldname}:</div>
+                        <div class="form-group row">
+                            <div class="col-sm-4 text-right">{$domainfieldname}:</div>
                             <div class="col-sm-8">{$domainfield}</div>
                         </div>
                     {/foreach}
@@ -160,7 +149,7 @@ var _localLang = {
                 {if $atleastonenohosting}
 
                     <div class="sub-heading">
-                        <span>{$LANG.domainnameservers}</span>
+                        <span class="primary-bg-color">{$LANG.domainnameservers}</span>
                     </div>
 
                     <p>{$LANG.cartnameserversdesc}</p>
@@ -200,7 +189,7 @@ var _localLang = {
 
                 {/if}
 
-                <div class="text-center">
+                <div class="text-center pt-4">
                     <button type="submit" class="btn btn-primary btn-lg">
                         {$LANG.continue}
                         &nbsp;<i class="fas fa-arrow-circle-right"></i>
