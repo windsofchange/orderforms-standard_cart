@@ -22,13 +22,13 @@ var _localLang = {
 
         <div class="col-md-3 pull-md-left sidebar hidden-xs hidden-sm">
 
-            {include file="orderforms/{$carttpl}/sidebar-categories.tpl"}
+            {include file="orderforms/standard_cart/sidebar-categories.tpl"}
 
         </div>
 
         <div class="col-md-9 pull-md-right">
 
-            {include file="orderforms/{$carttpl}/sidebar-categories-collapsed.tpl"}
+            {include file="orderforms/standard_cart/sidebar-categories-collapsed.tpl"}
 
             <form method="post" action="{$smarty.server.PHP_SELF}?a=confdomains" id="frmConfigureDomains">
                 <input type="hidden" name="update" value="true" />
