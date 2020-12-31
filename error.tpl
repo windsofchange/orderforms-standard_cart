@@ -22,7 +22,7 @@
 
         <div class="col-md-9 pull-md-right">
 
-            {include file="orderforms/{$carttpl}/sidebar-categories-collapsed.tpl"}
+            {include file="orderforms/standard_cart/sidebar-categories-collapsed.tpl"}
 
             <div class="alert alert-danger error-heading">
                 <i class="fas fa-exclamation-triangle"></i>
