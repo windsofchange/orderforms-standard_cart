@@ -11,19 +11,7 @@
                     {$LANG.transferdomain}
                 </h1>
             </div>
-
-        </div>
-
-        <div class="col-md-3 pull-md-left sidebar hidden-xs hidden-sm">
-
-            {include file="orderforms/{$carttpl}/sidebar-categories.tpl"}
-
-        </div>
-
-        <div class="col-md-9 pull-md-right">
-
-            {include file="orderforms/{$carttpl}/sidebar-categories-collapsed.tpl"}
-
+            {include file="orderforms/standard_cart/sidebar-categories-collapsed.tpl"}
             <div class="text-center">
                 <h2>{lang key='orderForm.transferToUs'}</h2>
                 <p>{lang key='orderForm.transferExtend'}*</p>
@@ -80,6 +68,7 @@
                 </div>
             </form>
             <p class="text-center small">* {lang key='orderForm.extendExclusions'}</p>
+            {include file="$template/includes/alert.tpl" type="warning" msg=$LANG.domaintransferquestions}
         </div>
     </div>
 </div>
