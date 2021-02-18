@@ -82,7 +82,8 @@
             </form>
 
             <p class="text-center small">* {lang key='orderForm.extendExclusions'}</p>
-{include file="$template/includes/alert.tpl" type="warning" msg=$LANG.domaintransferquestions}
+            {include file="$template/includes/alert.tpl" type="warning" msg=$LANG.domaintransferquestions}
+
         </div>
     </div>
 </div>
