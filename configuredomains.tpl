@@ -10,6 +10,14 @@ var _localLang = {
 <div id="order-standard_cart">
 
     <div class="row">
+        <div class="cart-sidebar">
+            {include file="orderforms/standard_cart/sidebar-categories.tpl"}
+        </div>
+        <div class="cart-body">
+            <div class="header-lined">
+                <h1 class="font-size-36">{$LANG.cartdomainsconfig}</h1>
+            </div>
+            {include file="orderforms/standard_cart/sidebar-categories-collapsed.tpl"}
 
             <form method="post" action="{$smarty.server.PHP_SELF}?a=confdomains" id="frmConfigureDomains">
                 <input type="hidden" name="update" value="true" />
@@ -65,7 +73,7 @@ var _localLang = {
                         <div class="row addon-products">
 
                             {if $domain.dnsmanagement}
-                                <div class="col-sm-{math equation="12 / numAddons" numAddons=$domain.addonsCount}">
+                                <div class="col-sm-{math equation="12 / numAddons" numAddons=$domain.addonsCount} mb-3">
                                     <div class="panel panel-default panel-addon{if $domain.dnsmanagementselected} panel-addon-selected{/if}">
                                         <div class="panel-body">
                                             <label>
@@ -86,7 +94,7 @@ var _localLang = {
                             {/if}
 
                             {if $domain.idprotection}
-                                <div class="col-sm-{math equation="12 / numAddons" numAddons=$domain.addonsCount}">
+                                <div class="col-sm-{math equation="12 / numAddons" numAddons=$domain.addonsCount} mb-3">
                                     <div class="panel panel-default panel-addon{if $domain.idprotectionselected} panel-addon-selected{/if}">
                                         <div class="panel-body">
                                             <label>
@@ -107,7 +115,7 @@ var _localLang = {
                             {/if}
 
                             {if $domain.emailforwarding}
-                                <div class="col-sm-{math equation="12 / numAddons" numAddons=$domain.addonsCount}">
+                                <div class="col-sm-{math equation="12 / numAddons" numAddons=$domain.addonsCount} mb-3">
                                     <div class="panel panel-default panel-addon{if $domain.emailforwardingselected} panel-addon-selected{/if}">
                                         <div class="panel-body">
                                             <label>
@@ -131,7 +139,7 @@ var _localLang = {
                     {/if}
                     {foreach from=$domain.fields key=domainfieldname item=domainfield}
                         <div class="form-group row">
-                            <div class="col-sm-4 text-right">{$domainfieldname}:</div>
+                            <div class="col-sm-4 text-sm-right"">{$domainfieldname}:</div>
                             <div class="col-sm-8">{$domainfield}</div>
                         </div>
                     {/foreach}
