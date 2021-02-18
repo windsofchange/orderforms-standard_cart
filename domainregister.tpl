@@ -326,6 +326,7 @@
                     </div>
                 {/if}
             </div>
+            {include file="$template/includes/alert.tpl" type="info" msg=$LANG.domainregisterinfo}
         </div>
     </div>
 </div>
