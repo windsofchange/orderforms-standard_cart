@@ -39,3 +39,7 @@ div#div_dompromo th:nth-child(1), th:nth-child(5), th:nth-child(3) {
     font-size: 1.35em;
     border-radius: 4px 4px 0 0;
 }
+.tld-sale-group-sale {
+    background-color: #f7d458;
+    color: #000000cc;
+}
