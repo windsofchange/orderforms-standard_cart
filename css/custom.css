@@ -22,7 +22,44 @@
     padding-right: 15px;
     padding-left: 15px;
 }
-    
+
+@media only screen and (max-width: 1199px) {
+    #order-standard_cart .cart-sidebar {
+        display: none;
+    }
+    #order-standard_cart .cart-body {
+        width: 100%;
+        float: none;
+    }
+
+    #order-standard_cart .secondary-cart-body {
+        width: 69%;
+    }
+    #order-standard_cart .secondary-cart-sidebar {
+        width: 31%;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    #order-standard_cart .secondary-cart-body {
+        width: 100%;
+        float: none;
+    }
+    #order-standard_cart .secondary-cart-sidebar {
+        margin: 0 auto;
+        width: 300px;
+        float: none;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    #order-standard_cart .secondary-cart-sidebar {
+        width: 100%;
+    }
+}
+
+
+
 div#div_dompromo td:nth-child(1), td:nth-child(5), td:nth-child(3) {
    display: none;
 }
