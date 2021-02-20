@@ -1,113 +1,78 @@
-/* *****************************************************
-
-    ** Custom Stylesheet ** SIX Template
-
-    Any custom styling you want to apply should be
-    defined here.
-
-***************************************************** */
-
-body {# font-size: 1.6em;}
-.navbar-main {background-color: #2c517b; /** #444d58 #465054  **/ border-color:#2e6da4;}
-@media (min-width: 1200px) {
-    .container {width: 1220px;}
-}
-@media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    .navbar-main {background-color: #2c517b;}
-    body {
-       /** font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; **/
-        font-size: 16px !important;
-        line-height: 1.42857143;
-        color: #333;
-        background-color: #fff;
-    }
-    #order-standard_cart label {font-weight: 300; color: #666;
-        font-size: 16px !important;}
-    /** .list-group {font-size: 1em;} **/
-    .suggested-domains .btn:not(.domain-contact-support) {
-    padding: 2px 10px;
-    font-size: 14px !important;
-    line-height: 1.4;
-    border-radius: 3px;
-    background-color: #555;
-    border-color: #333;
-    color: #fff;
-    }
-}
-@media only screen and (max-width: 380px) {
-    /* For mobile phones: */
-    .navbar-main {background-color: #2c517b;}
-    body {
-        /** font-family: "Helvetica Neue",Helvetica,Arial,sans-serif; **/
-        font-size: 16px !important;
-        line-height: 1.42857143;
-        color: #333;
-        background-color: #fff;
-    }
-    #order-standard_cart label {font-weight: 300; color: #666;
-        font-size: 16px !important;}
-    /** .list-group {font-size: 1em;} **/
-    .suggested-domains .btn:not(.domain-contact-support) {
-    padding: 2px 10px;
-    font-size: 14px !important;
-    line-height: 1.4;
-    border-radius: 3px;
-    background-color: #555;
-    border-color: #333;
-    color: #fff;
-    }
-
-    #order-standard_cart .field, #order-standard_cart .form-control {
-    position: relative;
-    vertical-align: top;
-    border: 1px solid #ddd;
-    display: -moz-inline-stack;
-    display: inline-block;
-    color: #626262;
-    outline: 0;
-    background-color: #fff;
-    height: 36px;
+#order-standard_cart .cart-body {
+    float: right;
     width: 100%;
-    border-radius: 3px;
-    font-size: 12.5px !important;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
     }
+#order-standard_cart .secondary-cart-sidebar {
+    float: right;
+    width: 30%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+#order-standard_cart .secondary-cart-body {
+    float: left;
+    width: 70%;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+    
+div#div_dompromo td:nth-child(1), td:nth-child(5), td:nth-child(3) {
+   display: none;
 }
 
-ul.top-nav>li.primary-action>a.btn {
-    background-color: #fff;color: #777;}
-input {font-size: 1.2em}
-div.header-lined .breadcrumb {font-size: .95em;}
-.label-info {background-color:#f77 ;} /* #0e4f76cf */
-.text-danger {color: #FB3138; /** #a94442; **/ }
-.panel {font-size: .99em;}
-.label2 {
-    display: inline;
-    padding: 10px 16px;
-    font-size: 18px;
-    font-family: "Open Sans";
-    line-height: 1;
+div#div_dompromo th:nth-child(1), th:nth-child(5), th:nth-child(3) {
+   display: none;
+}
+
+    .div_dompromo {
+        /** margin-left:25px; **/
+        background-color: #d9edf759;
+        border-color: #bce8f1;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid transparent;
+        border-radius: 10px;
+    }
+    .td_dompromo {text-align:center;color:#444;padding-right: 5px;width: 41%;}
+    .th_dompromo {text-align:center;font-size:1.1em;}
+
+
+
+@media only screen and (max-width: 600px) {
+  .div_dompromo {
+    background-color: white;
+    padding: 3px;
+  }
+}
+.suggested-domains .promo.sale .promo.hot .promo.new {
+    text-transform: lowercase;
+}
+#order-standard_cart .order-summary {
+    background-color: #2c517b;
+    border-bottom: 3px solid #2c517b;
+    border-radius: 4px;
+}
+#order-standard_cart .view-cart-items-header {
+    margin: 0;
+    padding: 8px 15px;
+    background-color: #2c517b;
     color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: .3em;
-    margin-bottom: 0;
+    font-size: 1.35em;
+    border-radius: 4px 4px 0 0;
 }
-.h4, .h5, .h6, h4, h5, h6 {
-    margin-top: 18px;
-    margin-bottom: 5px;
-}
-.list-group {
-    font-size: 0.95em;
+.tld-sale-group-sale {
+    background-color: #f7d458;
+    color: #000000cc;
 }
 
-
-
-
-
-/** Properties moved to standart_cart custom.css **
-
+/** Testing properties from six custom.css **/
 #order-standard_cart .sub-heading span, #order-standard_cart .sub-heading-borderless span {
     display: inline-block;
     position: relative;
@@ -144,7 +109,9 @@ div.header-lined .breadcrumb {font-size: .95em;}
 .kbarticles a {font-size: 1.2em;font-weight: 500;}
 .spotlight-tld span {display: block;padding: 5px 0; font-weight: 900;}
 
-.label-warning {background-color: #f90;}
+.label-danger {background-color: #f77; font-size: 1.23em;}
+.label-warning {background-color: #f90; font-size: 1.23em;}
+.label-info {background-color: grey ;} /* #0e4f76cf */
 .btn-success {color: #fff; background-color: #293239; border-color: #293239;}
 .btn-success.disabled.focus, .btn-success.disabled:focus, .btn-success.disabled:hover, .btn-success[disabled].focus, .btn-success[disabled]:focus, .btn-success[disabled]:hover, fieldset[disabled] .btn-success.focus, fieldset[disabled] .btn-success:focus, fieldset[disabled] .btn-success:hover {
     background-color: #f7b76ceb;border-color: #ffa53be0;}
@@ -159,11 +126,11 @@ span.status-redemption, span.status-grace, span.status-suspended {
     color: #f77; background-color: #ff777703; border-color: #ccc;}
 span.status-redemption:hover, span.status-grace:hover, span.status-suspended:hover {
     color: #ffffff; background-color: #fF7777;border-color: #fdb1ad;}
-
     
 
+
 .added {color: #5cb85c; 
-    /** color:#84ff85; 
+    /** color:#84ff85; **/ 
     font-size: 1.1em; 
     font-weight: 900;}
 .achecker{color:white; font-size: 1em; font-weight: 900;}
@@ -175,10 +142,6 @@ span.status-redemption:hover, span.status-grace:hover, span.status-suspended:hov
     -webkit-box-shadow: none;
     box-shadow: none;
 }
-
-
-
-** END **/
 
 
 
